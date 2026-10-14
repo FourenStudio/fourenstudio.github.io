@@ -18,51 +18,12 @@
     {
       "title": "Listen",
       "type": "audio",
-      "text": "All presets on the same synth pad.",
-      "reference": {
-        "name": "Dry",
-        "file": "audio/dry.m4a"
-      },
+      "text": "Four presets on a synth pad.",
       "items": [
         {
           "name": "Glitch Blips",
           "file": "audio/glitch-blips.m4a",
           "note": "Square jumps"
-        },
-        {
-          "name": "Soft Blips",
-          "file": "audio/soft-blips.m4a",
-          "note": "Rounded jumps"
-        },
-        {
-          "name": "Sag",
-          "file": "audio/sag.m4a",
-          "note": "Dips flat"
-        },
-        {
-          "name": "Spark",
-          "file": "audio/spark.m4a",
-          "note": "Quick jumps up"
-        },
-        {
-          "name": "Stutter",
-          "file": "audio/stutter.m4a",
-          "note": "Semitone jumps"
-        },
-        {
-          "name": "Random Steps",
-          "file": "audio/random-steps.m4a",
-          "note": "Random jumps"
-        },
-        {
-          "name": "Fifths",
-          "file": "audio/fifths.m4a",
-          "note": "Jumps a fifth up"
-        },
-        {
-          "name": "Ping Pong",
-          "file": "audio/ping-pong.m4a",
-          "note": "Jumps left or right"
         },
         {
           "name": "Glitter",
@@ -78,16 +39,6 @@
           "name": "Endless Rise",
           "file": "audio/endless-rise.m4a",
           "note": "Shepard tone"
-        },
-        {
-          "name": "Juno Chorus",
-          "file": "audio/juno-chorus.m4a",
-          "note": "Juno-style"
-        },
-        {
-          "name": "Flanger",
-          "file": "audio/flanger.m4a",
-          "note": "Tape-style"
         }
       ]
     },
@@ -137,16 +88,8 @@
           "caption": "Bloom Pad"
         },
         {
-          "file": "images/ui-glitter.jpg",
-          "caption": "Glitter"
-        },
-        {
           "file": "images/ui-endless-rise.jpg",
           "caption": "Endless Rise"
-        },
-        {
-          "file": "images/ui-ping-pong.jpg",
-          "caption": "Ping Pong"
         }
       ]
     }
