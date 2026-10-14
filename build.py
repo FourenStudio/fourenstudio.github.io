@@ -221,7 +221,8 @@ def section_download(product):
 
 def product_page(site, product):
     body = [hero(product, ""), wave_divider()]
-    body += [f'<section class="content"><div class="prose intro">{"".join(f"<p>{esc(t)}</p>" for t in product["intro"])}</div></section>']
+    if product.get("intro"):
+        body.append(f'<section class="content"><div class="prose intro">{"".join(f"<p>{esc(t)}</p>" for t in product["intro"])}</div></section>')
     for s in product.get("sections", []):
         body.append(SECTIONS[s["type"]](s))
     body.append(section_download(product))
