@@ -61,6 +61,10 @@ def files_referenced(product):
 # Small HTML pieces
 
 
+def lead(text):
+    return f'<p class="lead">{esc(text)}</p>' if text else ""
+
+
 def section_title(text):
     return f'<h2 class="section-title">{esc(text)}</h2>'
 
@@ -163,7 +167,7 @@ def section_audio(s):
     return f"""
 <section class="content">
   {section_title(s['title'])}
-  <p class="lead">{esc(s.get('text', ''))}</p>
+  {lead(s.get('text'))}
   <ul class="tracks">{''.join(rows)}
   </ul>
 </section>"""
@@ -175,7 +179,7 @@ def section_features(s):
     return f"""
 <section class="content">
   {section_title(s['title'])}
-  <p class="lead">{esc(s.get('text', ''))}</p>
+  {lead(s.get('text'))}
   {image}
   <dl class="features">{items}</dl>
 </section>"""
