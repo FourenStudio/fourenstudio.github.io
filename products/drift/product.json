@@ -1,0 +1,213 @@
+{
+  "name": "DRiFT",
+  "order": 1,
+  "wordmark": "images/drift-wordmark.svg",
+  "tagline": "Pitch drift for any sound.",
+  "price": "Free",
+  "version": "1.0.0",
+  "released": "2026-10-14",
+  "formats": "VST3",
+  "compatibility": "Ableton Live, FL Studio, Cubase, Reaper, Bitwig and Studio One",
+  "hero": "images/ui-glitch-blips.jpg",
+  "card": "images/ui-glitch-blips.jpg",
+  "intro": [
+    "Analog-style pitch drift. Pitch only, no echo.",
+    "The pitch holds, then jumps. Every jump is random."
+  ],
+  "sections": [
+    {
+      "title": "Listen",
+      "type": "audio",
+      "text": "All presets on the same synth pad.",
+      "reference": {
+        "name": "Dry",
+        "file": "audio/dry.m4a"
+      },
+      "items": [
+        {
+          "name": "Glitch Blips",
+          "file": "audio/glitch-blips.m4a",
+          "note": "Square jumps"
+        },
+        {
+          "name": "Soft Blips",
+          "file": "audio/soft-blips.m4a",
+          "note": "Rounded jumps"
+        },
+        {
+          "name": "Sag",
+          "file": "audio/sag.m4a",
+          "note": "Dips flat"
+        },
+        {
+          "name": "Spark",
+          "file": "audio/spark.m4a",
+          "note": "Quick jumps up"
+        },
+        {
+          "name": "Stutter",
+          "file": "audio/stutter.m4a",
+          "note": "Semitone jumps"
+        },
+        {
+          "name": "Random Steps",
+          "file": "audio/random-steps.m4a",
+          "note": "Random jumps"
+        },
+        {
+          "name": "Fifths",
+          "file": "audio/fifths.m4a",
+          "note": "Jumps a fifth up"
+        },
+        {
+          "name": "Ping Pong",
+          "file": "audio/ping-pong.m4a",
+          "note": "Jumps left or right"
+        },
+        {
+          "name": "Glitter",
+          "file": "audio/glitter.m4a",
+          "note": "Jumps an octave up"
+        },
+        {
+          "name": "Bloom Pad",
+          "file": "audio/bloom-pad.m4a",
+          "note": "Slow, deep sways"
+        },
+        {
+          "name": "Endless Rise",
+          "file": "audio/endless-rise.m4a",
+          "note": "Shepard tone"
+        },
+        {
+          "name": "Juno Chorus",
+          "file": "audio/juno-chorus.m4a",
+          "note": "Juno-style"
+        },
+        {
+          "name": "Flanger",
+          "file": "audio/flanger.m4a",
+          "note": "Tape-style"
+        }
+      ]
+    },
+    {
+      "title": "Modes",
+      "type": "features",
+      "image": "images/detail-mod-a.jpg",
+      "text": "Two modulators. Each one runs one of five modes.",
+      "items": [
+        {
+          "name": "Analog",
+          "text": "Holds pitch, then jumps. Depth, rate, length, shape, direction, accuracy."
+        },
+        {
+          "name": "Tape",
+          "text": "Wow and flutter."
+        },
+        {
+          "name": "Drift",
+          "text": "Slow random wander."
+        },
+        {
+          "name": "Detune",
+          "text": "Detunes left and right apart."
+        },
+        {
+          "name": "Shepard",
+          "text": "Endlessly rising pitch."
+        }
+      ]
+    },
+    {
+      "title": "Scope",
+      "type": "text-image",
+      "image": "images/detail-scope.jpg",
+      "text": [
+        "Shows the pitch of the left and right channels, and each modulator.",
+        "Separation: how much left and right differ. Mix: dry and wet. Volume: level follows the pitch."
+      ]
+    },
+    {
+      "title": "Look",
+      "type": "gallery",
+      "images": [
+        {
+          "file": "images/ui-bloom-pad.jpg",
+          "caption": "Bloom Pad"
+        },
+        {
+          "file": "images/ui-glitter.jpg",
+          "caption": "Glitter"
+        },
+        {
+          "file": "images/ui-endless-rise.jpg",
+          "caption": "Endless Rise"
+        },
+        {
+          "file": "images/ui-ping-pong.jpg",
+          "caption": "Ping Pong"
+        }
+      ]
+    }
+  ],
+  "specs": {
+    "Mac": [
+      "VST3, 64-bit",
+      "macOS 11 or later",
+      "Apple silicon and Intel",
+      "No iLok, no account",
+      "No AU yet (Logic Pro)"
+    ],
+    "Windows": [
+      "VST3, 64-bit",
+      "Windows 10 or later",
+      "Coming soon"
+    ]
+  },
+  "downloads": [
+    {
+      "platform": "Mac",
+      "file": "downloads/DRiFT-1.0.0-mac.zip",
+      "note": "Universal · VST3"
+    },
+    {
+      "platform": "Windows",
+      "file": null,
+      "note": "Coming soon"
+    }
+  ],
+  "install": {
+    "Mac": [
+      {
+        "text": "Unzip the download."
+      },
+      {
+        "text": "In Finder, choose Go › Go to Folder and paste:",
+        "code": "~/Library/Audio/Plug-Ins/VST3"
+      },
+      {
+        "text": "Move DRiFT.vst3 into that folder."
+      },
+      {
+        "text": "DRiFT isn't signed by Apple yet. To allow it, run this in Terminal:",
+        "code": "xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/DRiFT.vst3"
+      },
+      {
+        "text": "Rescan plugins in your DAW."
+      }
+    ],
+    "Windows": [
+      {
+        "text": "Unzip the download."
+      },
+      {
+        "text": "Move DRiFT.vst3 into:",
+        "code": "C:\\Program Files\\Common Files\\VST3"
+      },
+      {
+        "text": "Rescan plugins in your DAW."
+      }
+    ]
+  }
+}
