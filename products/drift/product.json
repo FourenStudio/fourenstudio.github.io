@@ -11,8 +11,7 @@
   "hero": "images/ui-glitch-blips.jpg",
   "card": "images/ui-glitch-blips.jpg",
   "intro": [
-    "Analog-style pitch drift. Pitch only, no echo.",
-    "The pitch holds, then jumps. Every jump is random."
+    "Analog-style pitch drift."
   ],
   "sections": [
     {
@@ -86,10 +85,6 @@
         {
           "file": "images/ui-bloom-pad.jpg",
           "caption": "Bloom Pad"
-        },
-        {
-          "file": "images/ui-endless-rise.jpg",
-          "caption": "Endless Rise"
         }
       ]
     }
