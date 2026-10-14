@@ -102,7 +102,7 @@ main { overflow-x: hidden; }
   transition: background 0.15s, color 0.15s;
 }
 .pill:hover { background: var(--text); color: var(--bg); }
-.pill.big { padding: 16px 34px; font-size: 17px; min-width: 260px; }
+.pill.big { padding: 16px 34px; font-size: 17px; min-width: 200px; }
 .pill small { font-weight: 400; font-size: 12px; letter-spacing: 0.02em; opacity: 0.7; margin-top: 2px; }
 .pill.disabled { border-color: #444; color: #666; pointer-events: none; }
 
@@ -185,7 +185,7 @@ main { overflow-x: hidden; }
   left: 13px; top: 12px; width: 4px; height: 16px; border: 0;
   background: currentColor; box-shadow: 9px 0 0 currentColor;
 }
-.play:focus-visible, .pill:focus-visible, .copy:focus-visible { outline: 2px solid var(--phosphor); outline-offset: 3px; }
+.play:focus-visible, .pill:focus-visible { outline: 2px solid var(--phosphor); outline-offset: 3px; }
 
 /* gallery */
 .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 480px), 1fr)); gap: 40px 28px; }
@@ -193,43 +193,8 @@ main { overflow-x: hidden; }
 .gallery img { border-radius: 12px; }
 .gallery figcaption { color: var(--muted); font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; margin-top: 12px; }
 
-/* cards: specs + install */
-.card { background: var(--card); border-radius: 22px; padding: clamp(24px, 4vw, 48px); }
-.specs { margin-top: 110px; text-align: center; color: #c9c9c4; }
-.specs h2 { font-size: 17px; letter-spacing: 0.04em; margin: 0 0 36px; }
-.specs .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 32px; }
-.specs h3 { font-size: 17px; margin: 0 0 18px; }
-.specs ul { list-style: none; padding: 0; margin: 0; font-size: 15px; }
-.specs li { margin: 0 0 14px; }
-
-.downloads { display: flex; gap: 16px; flex-wrap: wrap; margin: 8px 0 48px; }
-.installs { display: grid; gap: 22px; }
-.install h3 { margin: 0 0 16px; font-size: 18px; }
-.install ol { margin: 0; padding-left: 22px; }
-.install li { margin: 0 0 14px; }
-.install li p { margin: 0 0 8px; }
-.code {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: #050505;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 10px 10px 10px 14px;
-}
-.code code { font: 13px "Plex Mono", Menlo, monospace; color: var(--phosphor); overflow-x: auto; white-space: nowrap; flex: 1; }
-.copy {
-  flex-shrink: 0;
-  background: transparent;
-  color: var(--text);
-  border: 1px solid #555;
-  border-radius: 999px;
-  padding: 5px 12px;
-  font-size: 12px;
-  cursor: pointer;
-}
-.copy:hover { border-color: var(--text); }
-
+/* download links */
+.downloads { display: flex; gap: 16px; flex-wrap: wrap; margin: 8px 0 0; }
 /* home grid */
 .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 28px; }
 .product-card {

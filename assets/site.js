@@ -1,4 +1,4 @@
-// FourenStudio: drifting wave dividers, preset audio players, copy buttons.
+// FourenStudio: drifting wave dividers and preset audio players.
 (function () {
   "use strict";
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -81,13 +81,4 @@
     });
   });
 
-  // ---- copy buttons in the install guide ----
-  document.querySelectorAll(".copy").forEach(function (button) {
-    button.addEventListener("click", function () {
-      navigator.clipboard.writeText(button.dataset.copy).then(function () {
-        button.textContent = "Copied";
-        setTimeout(function () { button.textContent = "Copy"; }, 1500);
-      });
-    });
-  });
 })();

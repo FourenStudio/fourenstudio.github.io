@@ -9,19 +9,24 @@
   "compatibility": "Ableton Live, FL Studio, Cubase, Reaper, Bitwig, Studio One and other VST3 hosts",
   "hero": "images/ui.jpg",
   "card": "images/ui.jpg",
-
   "intro": [
     "A paragraph or two about the plugin."
   ],
-
   "sections": [
     {
       "title": "Listen",
       "type": "audio",
       "text": "Short line above the players.",
-      "reference": { "name": "Dry", "file": "audio/dry.m4a" },
+      "reference": {
+        "name": "Dry",
+        "file": "audio/dry.m4a"
+      },
       "items": [
-        { "name": "Preset name", "file": "audio/preset.m4a", "note": "What it sounds like" }
+        {
+          "name": "Preset name",
+          "file": "audio/preset.m4a",
+          "note": "What it sounds like"
+        }
       ]
     },
     {
@@ -30,33 +35,31 @@
       "image": "images/detail.jpg",
       "text": "Optional line above the list.",
       "items": [
-        { "name": "Feature", "text": "What it does." }
+        {
+          "name": "Feature",
+          "text": "What it does."
+        }
       ]
     },
     {
       "title": "Look",
       "type": "gallery",
-      "images": [ { "file": "images/ui.jpg", "caption": "Caption" } ]
+      "images": [
+        {
+          "file": "images/ui.jpg",
+          "caption": "Caption"
+        }
+      ]
     }
   ],
-
-  "specs": {
-    "Mac": [ "VST3 (64-bit)", "macOS 11 Big Sur or later", "Universal: Apple silicon and Intel" ],
-    "Windows": [ "VST3 (64-bit)", "Windows 10 or later" ]
-  },
-
   "downloads": [
-    { "platform": "Mac", "file": "downloads/NewPlugin-1.0.0-mac.zip", "note": "Universal · VST3" },
-    { "platform": "Windows", "file": null, "note": "Coming soon" }
-  ],
-
-  "install": {
-    "Mac": [
-      { "text": "Unzip the download." },
-      { "text": "In Finder, choose Go › Go to Folder… and paste:", "code": "~/Library/Audio/Plug-Ins/VST3" },
-      { "text": "Drag NewPlugin.vst3 into that folder." },
-      { "text": "Open Terminal and run:", "code": "xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/NewPlugin.vst3" },
-      { "text": "Rescan plugins in your DAW." }
-    ]
-  }
+    {
+      "platform": "Mac",
+      "file": "downloads/NewPlugin-1.0.0-mac.zip"
+    },
+    {
+      "platform": "Windows",
+      "file": null
+    }
+  ]
 }

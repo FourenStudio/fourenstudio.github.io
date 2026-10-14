@@ -204,41 +204,18 @@ def section_gallery(s):
 SECTIONS = {"audio": section_audio, "features": section_features, "text-image": section_text_image, "gallery": section_gallery}
 
 
-def section_specs(product):
-    cols = "".join(f'<div><h3>{esc(platform)}</h3><ul>{"".join(f"<li>{esc(x)}</li>" for x in lines)}</ul></div>'
-                   for platform, lines in product.get("specs", {}).items())
-    return f"""
-<section class="content wide">
-  <div class="card specs"><h2>SPECS</h2><div class="cols">{cols}</div></div>
-</section>"""
-
-
 def section_download(product):
-    buttons = []
+    """Just the download links, one per platform. Setup steps live in Install.txt inside each zip."""
+    links = []
     for d in product.get("downloads", []):
         if d.get("file"):
-            buttons.append(f'<a class="pill big" href="{esc(d["file"])}" download>Download for {esc(d["platform"])}'
-                           f'<small>{esc(d.get("note", ""))}</small></a>')
+            links.append(f'<a class="pill big" href="{esc(d["file"])}" download>{esc(d["platform"])}</a>')
         else:
-            buttons.append(f'<span class="pill big disabled">{esc(d["platform"])}<small>{esc(d.get("note", ""))}</small></span>')
-
-    guides = []
-    for platform, steps in product.get("install", {}).items():
-        lis = []
-        for step in steps:
-            code = ""
-            if step.get("code"):
-                code = (f'<div class="code"><code>{esc(step["code"])}</code>'
-                        f'<button class="copy" data-copy="{esc(step["code"])}">Copy</button></div>')
-            lis.append(f"<li><p>{esc(step['text'])}</p>{code}</li>")
-        guides.append(f'<div class="card install"><h3>Install on {esc(platform)}</h3><ol>{"".join(lis)}</ol></div>')
-
+            links.append(f'<span class="pill big disabled">{esc(d["platform"])}<small>Coming soon</small></span>')
     return f"""
 <section class="content" id="download">
   {section_title("Download")}
-  <p class="lead">Free. Version {esc(product['version'])}.</p>
-  <div class="downloads">{''.join(buttons)}</div>
-  <div class="installs">{''.join(guides)}</div>
+  <div class="downloads">{''.join(links)}</div>
 </section>"""
 
 
@@ -247,7 +224,6 @@ def product_page(site, product):
     body += [f'<section class="content"><div class="prose intro">{"".join(f"<p>{esc(t)}</p>" for t in product["intro"])}</div></section>']
     for s in product.get("sections", []):
         body.append(SECTIONS[s["type"]](s))
-    body.append(section_specs(product))
     body.append(section_download(product))
     return page(site, f"{product['name']} · {site['name']}", product["tagline"], "\n".join(body), 2, product["hero"])
 

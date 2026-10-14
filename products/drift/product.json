@@ -94,63 +94,14 @@
       ]
     }
   ],
-  "specs": {
-    "Mac": [
-      "VST3, 64-bit",
-      "macOS 11 or later",
-      "Apple silicon and Intel",
-      "No iLok, no account",
-      "No AU yet (Logic Pro)"
-    ],
-    "Windows": [
-      "VST3, 64-bit",
-      "Windows 10 or later",
-      "Coming soon"
-    ]
-  },
   "downloads": [
     {
       "platform": "Mac",
-      "file": "downloads/DRiFT-1.0.0-mac.zip",
-      "note": "Universal · VST3"
+      "file": "downloads/DRiFT-1.0.0-mac.zip"
     },
     {
       "platform": "Windows",
-      "file": null,
-      "note": "Coming soon"
+      "file": null
     }
-  ],
-  "install": {
-    "Mac": [
-      {
-        "text": "Unzip the download."
-      },
-      {
-        "text": "In Finder, choose Go › Go to Folder and paste:",
-        "code": "~/Library/Audio/Plug-Ins/VST3"
-      },
-      {
-        "text": "Move DRiFT.vst3 into that folder."
-      },
-      {
-        "text": "DRiFT isn't signed by Apple yet. To allow it, run this in Terminal:",
-        "code": "xattr -dr com.apple.quarantine ~/Library/Audio/Plug-Ins/VST3/DRiFT.vst3"
-      },
-      {
-        "text": "Rescan plugins in your DAW."
-      }
-    ],
-    "Windows": [
-      {
-        "text": "Unzip the download."
-      },
-      {
-        "text": "Move DRiFT.vst3 into:",
-        "code": "C:\\Program Files\\Common Files\\VST3"
-      },
-      {
-        "text": "Rescan plugins in your DAW."
-      }
-    ]
-  }
+  ]
 }
