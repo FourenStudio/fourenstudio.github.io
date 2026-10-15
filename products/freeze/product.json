@@ -14,7 +14,7 @@
     "VST3 · Mac and Windows"
   ],
   "demo": {
-    "name": "Ice sweep",
+    "name": "Ice",
     "file": "audio/ice-sweep.m4a"
   },
   "intro": [],
@@ -22,60 +22,16 @@
     {
       "title": "Listen",
       "type": "audio",
-      "reference": {
-        "name": "Dry",
-        "file": "audio/dry.m4a"
-      },
       "items": [
         {
           "name": "Ice",
-          "file": "audio/ice.m4a",
-          "note": "Clean and airy"
-        },
-        {
-          "name": "Glass",
-          "file": "audio/glass.m4a",
-          "note": "Short, bright grains"
-        },
-        {
-          "name": "Haze",
-          "file": "audio/haze.m4a",
-          "note": "Soft and warm"
-        },
-        {
-          "name": "Ember",
-          "file": "audio/ember.m4a",
-          "note": "Dark, saturated, with delay"
+          "file": "audio/ice-sweep.m4a",
+          "note": "Amount from 0 to 100 %"
         },
         {
           "name": "Abyss",
           "file": "audio/abyss.m4a",
-          "note": "Deep and wide"
-        },
-        {
-          "name": "Octave",
-          "file": "audio/octave.m4a",
-          "note": "Grains an octave up"
-        },
-        {
-          "name": "Rhythm",
-          "file": "audio/rhythm.m4a",
-          "note": "Steps every 1/4"
-        },
-        {
-          "name": "Pulse",
-          "file": "audio/pulse.m4a",
-          "note": "Volume pulse"
-        },
-        {
-          "name": "Follow",
-          "file": "audio/follow.m4a",
-          "note": "Plays with the input"
-        },
-        {
-          "name": "Ice sweep",
-          "file": "audio/ice-sweep.m4a",
-          "note": "Amount 0 to 100 %"
+          "note": "Amount at 100 %"
         }
       ]
     },
@@ -107,36 +63,6 @@
         {
           "name": "Rhythm, Pulse, Follow",
           "text": "Their own setting top left: step length, pulse speed, invert."
-        }
-      ]
-    },
-    {
-      "title": "Look",
-      "type": "gallery",
-      "images": [
-        {
-          "file": "images/ui-glass.jpg",
-          "caption": "Glass"
-        },
-        {
-          "file": "images/ui-ember.jpg",
-          "caption": "Ember"
-        },
-        {
-          "file": "images/ui-abyss.jpg",
-          "caption": "Abyss"
-        },
-        {
-          "file": "images/ui-octave.jpg",
-          "caption": "Octave"
-        },
-        {
-          "file": "images/ui-rhythm.jpg",
-          "caption": "Rhythm"
-        },
-        {
-          "file": "images/ui-follow.jpg",
-          "caption": "Follow"
         }
       ]
     }
