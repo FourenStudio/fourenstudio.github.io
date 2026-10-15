@@ -1,0 +1,155 @@
+{
+  "name": "Freeze",
+  "order": 2,
+  "tagline": "Turns a pluck rhythm into one sustained sound.",
+  "price": "Free",
+  "version": "1.0.0",
+  "released": "2026-10-16",
+  "formats": "VST3",
+  "compatibility": "Ableton Live, FL Studio, Cubase, Reaper, Bitwig and Studio One",
+  "hero": "images/ui-ice.jpg",
+  "card": "images/ui-ice.jpg",
+  "highlights": [
+    "One big knob from pluck to pad",
+    "Nine presets: Rhythm, Pulse, Follow and more",
+    "VST3 · Mac and Windows"
+  ],
+  "demo": {
+    "name": "Ice sweep",
+    "file": "audio/ice-sweep.m4a"
+  },
+  "intro": [],
+  "sections": [
+    {
+      "title": "Listen",
+      "type": "audio",
+      "reference": {
+        "name": "Dry",
+        "file": "audio/dry.m4a"
+      },
+      "items": [
+        {
+          "name": "Ice",
+          "file": "audio/ice.m4a",
+          "note": "Clean and airy"
+        },
+        {
+          "name": "Glass",
+          "file": "audio/glass.m4a",
+          "note": "Short, bright grains"
+        },
+        {
+          "name": "Haze",
+          "file": "audio/haze.m4a",
+          "note": "Soft and warm"
+        },
+        {
+          "name": "Ember",
+          "file": "audio/ember.m4a",
+          "note": "Dark, saturated, with delay"
+        },
+        {
+          "name": "Abyss",
+          "file": "audio/abyss.m4a",
+          "note": "Deep and wide"
+        },
+        {
+          "name": "Octave",
+          "file": "audio/octave.m4a",
+          "note": "Grains an octave up"
+        },
+        {
+          "name": "Rhythm",
+          "file": "audio/rhythm.m4a",
+          "note": "Steps every 1/4"
+        },
+        {
+          "name": "Pulse",
+          "file": "audio/pulse.m4a",
+          "note": "Volume pulse"
+        },
+        {
+          "name": "Follow",
+          "file": "audio/follow.m4a",
+          "note": "Plays with the input"
+        },
+        {
+          "name": "Ice sweep",
+          "file": "audio/ice-sweep.m4a",
+          "note": "Amount 0 to 100 %"
+        }
+      ]
+    },
+    {
+      "title": "Controls",
+      "type": "features",
+      "image": "images/ui-pulse-time.jpg",
+      "items": [
+        {
+          "name": "Amount",
+          "text": "From the dry pluck to one sustained sound."
+        },
+        {
+          "name": "Grain and FX",
+          "text": "Grain length, reverb and delay."
+        },
+        {
+          "name": "Freeze",
+          "text": "The snowflake holds the sound playing now."
+        },
+        {
+          "name": "Noise",
+          "text": "Clean noise on top, bottom left."
+        },
+        {
+          "name": "Detune",
+          "text": "Detunes each grain up to 50 cents, bottom right."
+        },
+        {
+          "name": "Rhythm, Pulse, Follow",
+          "text": "Their own setting top left: step length, pulse speed, invert."
+        }
+      ]
+    },
+    {
+      "title": "Look",
+      "type": "gallery",
+      "images": [
+        {
+          "file": "images/ui-glass.jpg",
+          "caption": "Glass"
+        },
+        {
+          "file": "images/ui-ember.jpg",
+          "caption": "Ember"
+        },
+        {
+          "file": "images/ui-abyss.jpg",
+          "caption": "Abyss"
+        },
+        {
+          "file": "images/ui-octave.jpg",
+          "caption": "Octave"
+        },
+        {
+          "file": "images/ui-rhythm.jpg",
+          "caption": "Rhythm"
+        },
+        {
+          "file": "images/ui-follow.jpg",
+          "caption": "Follow"
+        }
+      ]
+    }
+  ],
+  "downloads": [
+    {
+      "platform": "Mac",
+      "file": null
+    },
+    {
+      "platform": "Windows",
+      "file": null
+    }
+  ]
+}

@@ -13,7 +13,8 @@ On GitHub, every push rebuilds and publishes the site automatically (`.github/wo
 1. Copy `products/_template` to `products/<plugin-name>` (lower case, no spaces, e.g. `products/bloomer`).
 2. Put screenshots in `images/`, audio previews (`.m4a` or `.mp3`) in `audio/`, and the zips in `downloads/`.
    Put install steps in an Install.txt inside each zip; the page only shows the download links.
-3. Edit `product.json`: name, text, file names, release date. The newest release date is featured on the home page.
+3. Edit `product.json`: name, text, file names, release date. The home page lists every plugin, newest release first,
+   each with its `highlights` (three short lines) and a `demo` audio clip to play.
 4. Check it locally:
 
    ```bash

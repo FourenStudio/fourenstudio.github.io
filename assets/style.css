@@ -61,8 +61,31 @@ main { overflow-x: hidden; }
 }
 .site-footer a { color: var(--muted); }
 
-.intro-line { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter) 24px; color: var(--muted); }
-.intro-line p { margin: 0; }
+/* ---------- landing: studio name, then one row per plugin ---------- */
+
+.landing { max-width: var(--max); margin: 0 auto; padding: clamp(30px, 6vw, 80px) var(--gutter) 0; text-align: center; }
+.landing h1 { font: clamp(34px, 5.6vw, 64px)/1 "Archivo Black", sans-serif; margin: 0 0 16px; }
+.landing p { color: var(--muted); font-size: 18px; margin: 0 auto; max-width: 44ch; }
+
+.showcase {
+  max-width: var(--max);
+  margin: 0 auto 90px;
+  padding: 0 var(--gutter);
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  gap: clamp(24px, 4vw, 56px);
+  align-items: center;
+}
+.showcase.flip { grid-template-columns: 1fr 1.35fr; }
+.showcase.flip .showcase-shot { order: 2; }
+.showcase-shot { border: 1px solid #d9d9d6; border-radius: 18px; padding: clamp(8px, 1vw, 12px); background: #050505; }
+.showcase-shot img { border-radius: 10px; }
+.showcase .product-name { font-size: 40px; margin-bottom: 8px; }
+.showcase .wordmark { height: 40px; }
+.showcase-tag { color: var(--muted); margin: 0 0 18px; }
+.showcase-points { list-style: none; padding: 0; margin: 0 0 26px; }
+.showcase-points li { padding: 9px 0; border-top: 1px solid var(--line); color: #cfcfca; }
+.listen { display: grid; grid-template-columns: 40px auto 1fr; align-items: center; gap: 12px; margin-bottom: 22px; color: var(--muted); font-size: 14px; }
 
 /* ---------- hero: framed product shot, then name / price / button ---------- */
 
@@ -195,22 +218,12 @@ main { overflow-x: hidden; }
 
 /* download links */
 .downloads { display: flex; gap: 16px; flex-wrap: wrap; margin: 8px 0 0; }
-/* home grid */
-.product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); gap: 28px; }
-.product-card {
-  text-decoration: none;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 12px 12px 18px;
-  transition: border-color 0.15s, transform 0.15s;
-}
-.product-card:hover { border-color: #888; transform: translateY(-2px); }
-.product-card img { border-radius: 9px; margin-bottom: 14px; }
-.card-meta { display: flex; justify-content: space-between; align-items: baseline; padding: 0 4px; }
-.card-name { font: 20px "Archivo Black", sans-serif; }
-.product-card .small { padding: 0 4px; max-width: none; }
-
 /* ---------- small screens ---------- */
+
+@media (max-width: 760px) {
+  .showcase, .showcase.flip { grid-template-columns: 1fr; margin-bottom: 64px; }
+  .showcase.flip .showcase-shot { order: 0; }
+}
 
 @media (max-width: 640px) {
   body { font-size: 16px; }
@@ -226,5 +239,4 @@ main { overflow-x: hidden; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .product-card { transition: none; }
 }

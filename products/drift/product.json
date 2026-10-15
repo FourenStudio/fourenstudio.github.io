@@ -10,6 +10,15 @@
   "compatibility": "Ableton Live, FL Studio, Cubase, Reaper, Bitwig and Studio One",
   "hero": "images/ui-glitch-blips.jpg",
   "card": "images/ui-glitch-blips.jpg",
+  "highlights": [
+    "Analog, Tape, Drift, Detune and Shepard modes",
+    "Two modulators and a pitch scope",
+    "VST3 · Mac and Windows"
+  ],
+  "demo": {
+    "name": "Glitch Blips",
+    "file": "audio/glitch-blips.m4a"
+  },
   "intro": [],
   "sections": [
     {

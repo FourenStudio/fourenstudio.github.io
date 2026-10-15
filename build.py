@@ -46,7 +46,7 @@ def load_products():
 
 def files_referenced(product):
     """Every file inside the product folder that its page links to."""
-    refs = [product.get("hero"), product.get("card"), product.get("wordmark")]
+    refs = [product.get("hero"), product.get("card"), product.get("wordmark"), (product.get("demo") or {}).get("file")]
     for section in product.get("sections", []):
         refs.append(section.get("image"))
         if section.get("reference"):
@@ -234,23 +234,35 @@ def product_page(site, product):
 
 
 def home_page(site, products):
-    featured = products[0]
-    cards = "".join(f"""
-    <a class="product-card" href="plugins/{p['slug']}/index.html">
-      <img src="plugins/{p['slug']}/{esc(p['card'])}" alt="" loading="lazy">
-      <div class="card-meta"><span class="card-name">{esc(p['name'])}</span><span class="price">{esc(p['price'])}</span></div>
-      <p class="small">{esc(p['tagline'])}</p>
-    </a>""" for p in products)
-    body = f"""
-<section class="intro-line"><p>{esc(site['tagline'])}</p></section>
-{hero(featured, f"plugins/{featured['slug']}/", link_to=f"plugins/{featured['slug']}/index.html")}
-{wave_divider()}
-<section class="content wide" id="plugins">
-  {section_title("Plugins")}
-  <div class="product-grid">{cards}
+    """Landing page: the studio name, then one row per plugin (screenshot, highlights, a demo to play,
+    download), alternating sides."""
+    rows = []
+    for i, p in enumerate(products):
+        link = f"plugins/{p['slug']}/index.html"
+        points = "".join(f"<li>{esc(h)}</li>" for h in p.get("highlights", []))
+        demo = p.get("demo")
+        listen = (f"""<div class="listen"><button class="play" aria-label="Play {esc(demo['name'])}" data-src="plugins/{p['slug']}/{esc(demo['file'])}"></button>
+        <span>Listen: {esc(demo['name'])}</span><div class="track-bar"><span></span></div></div>""" if demo else "")
+        rows.append(f"""
+<section class="showcase{' flip' if i % 2 else ''}">
+  <a class="showcase-shot" href="{link}"><img src="plugins/{p['slug']}/{esc(p['card'])}" alt="{esc(p['name'])} plugin interface" loading="lazy"></a>
+  <div>
+    {product_title(p, f"plugins/{p['slug']}/", "h2")}
+    <p class="showcase-tag">{esc(p['tagline'])}</p>
+    {f'<ul class="showcase-points">{points}</ul>' if points else ""}
+    {listen}
+    <a class="pill" href="{link}#download">DOWNLOAD</a>
   </div>
-</section>"""
-    return page(site, f"{site['name']} · {site['tagline']}", site["tagline"], body, 0)
+</section>""")
+    body = f"""
+<section class="landing" id="top">
+  <h1>{esc(site['name']).upper().replace("STUDIO", " STUDIO").strip()}</h1>
+  {f'<p>{esc(site["intro"])}</p>' if site.get("intro") else ""}
+</section>
+{wave_divider()}
+<div id="plugins">{"".join(rows)}
+</div>"""
+    return page(site, f"{site['name']} · {site['tagline']}", site["tagline"], body, 0, f"plugins/{products[0]['slug']}/{products[0]['card']}")
 
 
 # ---------------------------------------------------------------------------------------------

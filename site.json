@@ -1,6 +1,7 @@
 {
   "name": "FourenStudio",
-  "tagline": "Free audio plugins by fouren.",
+  "tagline": "Audio plugins by fouren.",
+  "intro": "Plugins by fouren. VST3 for Mac and Windows.",
   "year": "2026",
   "contact_email": "",
   "social": {
